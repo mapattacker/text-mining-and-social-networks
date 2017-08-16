@@ -12,3 +12,4 @@ This documentation summarises various text-mining and social network techniques 
    :maxdepth: 2
    :caption: Contents:
 
+   textbasics.rst
