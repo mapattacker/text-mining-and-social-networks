@@ -27,6 +27,8 @@ Add New Features to Vectorizer
 Multi-Nominal Naive Bayes & CountVectorizer
 --------------------------------------------
 
+Using plain Naive Bayes & CountVectorizer only.
+
 .. code:: python
 
   import pandas as pd
@@ -57,10 +59,36 @@ Multi-Nominal Naive Bayes & CountVectorizer
   roc = roc_auc_score(y_test, predictions)
   
   return roc
+  # 0.97208121827411165
   
+
+Multi-Nominal Naive Bayes & TfidfVectorizer
+--------------------------------------------
+
+Now using Naive Bayes & TfidfVectorizer only.
+
+.. code:: python
+  
+  def answer_five():
+    
+    vect = TfidfVectorizer(min_df=3).fit(X_train)
+    X_train_vectorized = vect.transform(X_train)
+    
+    model = MultinomialNB(alpha=0.1)
+    model.fit(X_train_vectorized, y_train)
+    
+    # Predict the transformed test documents
+    predictions = model.predict(vect.transform(X_test))
+    roc = roc_auc_score(y_test, predictions)
+    
+    return roc
+    # 0.94162436548223349
+    
 
 Support Vector Machine & TfidfVectorizer
 --------------------------------------------
+
+Using SVM & TfidfVectorizer, and also add an a new feature, character count.
 
 .. code:: python
 
@@ -90,6 +118,7 @@ Support Vector Machine & TfidfVectorizer
       roc = roc_auc_score(y_test, predictions)
       
       return roc
+  # 0.95813668234215565
       
 
 Logistic Regression & TfidfVectorizer
@@ -130,6 +159,7 @@ Add two more features, character count & digit count.
         
         return roc
         
+    # 0.97040897747143606
         
 Logistic Regression & TfidfVectorizer
 --------------------------------------
@@ -190,3 +220,16 @@ Add three more features, character count, digit count & non-word count.
       output=(roc, small, large)
 
       return output
+    
+  (0.97885931107074342,
+   [u'. ', u'..', u' i', u'? ', u' y', u' go', u':)', u' h', u'he', u'h '],
+   [u'digit_count',
+    u'ne',
+    u'co',
+    u'ia',
+    u'xt',
+    u'mob',
+    u'ww',
+    u' x',
+    u' ch',
+    u'ar'])
