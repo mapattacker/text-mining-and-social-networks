@@ -164,6 +164,9 @@ It has several important parameters, including
 
 CountVectorizer
 ****************
+More from sklearn_.
+
+.. _sklearn: http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer
 
 .. code:: python
 
@@ -188,6 +191,9 @@ or rarely used and only occur in long documents.
 
 TF-IDF can reduce the number of features required to train a model.
 
+More from sklearn2_.
+
+.. _sklearn2: http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer
 
 .. code:: python
 
