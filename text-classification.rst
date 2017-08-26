@@ -161,7 +161,7 @@ Add two more features, character count & digit count.
         
     # 0.97040897747143606
         
-Logistic Regression & TfidfVectorizer
+Logistic Regression & CountVectorizer
 --------------------------------------
 Add three more features, character count, digit count & non-word count.
 
