@@ -10,6 +10,10 @@ Stopwords
 **********
 Stopwords are common words that are found in most texts in a corpus. 
 
+
+Tokenizing
+***********
+
 .. code:: python
   
   import nltks
@@ -173,6 +177,7 @@ More from sklearn_.
   # Using Count Vectorizer
   from sklearn.feature_extraction.text import CountVectorizer
 
+  # Fit
   vect = CountVectorizer().fit(X_train)
   print vect.get_feature_names() # give a list of feature names
 
