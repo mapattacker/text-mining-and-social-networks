@@ -162,7 +162,8 @@ It has several important parameters, including
   * ``stop_words``: list of stop words to remove
   * ``token_pattern``: e.g., '(?u)\\b\\w\\w\\w+\\b'). enter a regex pattern
 
-One of them is **CountVectorizer**.
+CountVectorizer
+****************
 
 .. code:: python
 
@@ -177,7 +178,9 @@ One of them is **CountVectorizer**.
   print vect.vocabulary_.items() # gives pairs of key values in tuples instead, within a list
 
 
-The second is **TfidVectorizer**. TF-IDF (Term Frequency-Inverse Document Frequency)
+TfidVectorizer
+**************
+TF-IDF (Term Frequency-Inverse Document Frequency)
 is a metric where high weight is given to terms that appear often in a particular document, 
 but don't appear often in the corpus (all documents). 
 Features with low tf–idf are either commonly used across all documents 
