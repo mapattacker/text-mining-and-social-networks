@@ -11,6 +11,7 @@ This documentation summarises various text-mining and social network techniques 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :numbered:
 
    textbasics.rst
    glossary.rst
