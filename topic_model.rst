@@ -53,7 +53,7 @@ Training the Model
   # Your code here:
   ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=10, id2word=id_map, passes=25, random_state=34)
 
-  # Print Top 10 Topics
+  # Print Top 10 Topics / Word Distribution
   output = ldamodel.print_topics(10)
   print output
 
@@ -79,4 +79,17 @@ Predict Topic for Document
 
       output = list(ldamodel[corpus])[0]
 
+      return output
+
+Assigning Topic Names for Each Word Distribution
+************************************************
+Topic names are subjective to the assigner.
+
+.. code:: python
+
+  def topic_names():
+      
+      # Your Code Here
+      output = ['Computers & IT', 'Automobiles', 'Computers & IT', 'Religion', 'Automobiles', 'Sports',
+               'Education', 'Religion', 'Computers & IT', 'Science']
       return output
