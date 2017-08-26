@@ -14,6 +14,7 @@ This documentation summarises various text-mining and social network techniques 
    :numbered:
 
    textbasics.rst
+   spell-check.rst
    text-classification.rst
    glossary.rst
    
