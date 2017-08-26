@@ -108,6 +108,9 @@ Assign Scores to New Documents
 
 .. code:: python
 
+  # paraphrases is a DataFrame which contains the following columns: Quality, D1, and D2.
+  # Quality is an indicator variable which indicates if the two documents D1 and D2 are paraphrases of one another (1 for paraphrase, 0 for not paraphrase).
+
   import numpy as np
 
   def most_similar_docs():
