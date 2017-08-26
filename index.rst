@@ -13,3 +13,4 @@ This documentation summarises various text-mining and social network techniques 
    :caption: Contents:
 
    textbasics.rst
+   glossary.rst
