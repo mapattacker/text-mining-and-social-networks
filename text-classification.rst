@@ -1,10 +1,34 @@
 Text Classificaton
 ==================
 
+
+Add New Features to Vectorizer
+------------------------------
+
+.. code:: python
+
+  def add_feature(X, feature_to_add):
+      """
+      Returns sparse feature matrix with added feature.
+      feature_to_add can also be a list of features.
+      """
+      from scipy.sparse import csr_matrix, hstack
+      return hstack([X, csr_matrix(feature_to_add).T], 'csr')
+  
+  
+  # add character count feature to dataset
+  x_len = X_train.apply(len)
+  X_train_aug = add_feature(X_train_vectorized, x_len)
+
+  x_len2 = X_test.apply(len)
+  X_test_aug = add_feature(X_test_vectorized, x_len2)
+    
+
 Multi-Nominal Naive Bayes & CountVectorizer
 --------------------------------------------
 
 .. code:: python
+
   import pandas as pd
   import numpy as np
   from sklearn.model_selection import train_test_split
@@ -39,6 +63,7 @@ Support Vector Machine & TfidfVectorizer
 --------------------------------------------
 
 .. code:: python
+
   from sklearn.svm import SVC
   from sklearn.metrics import roc_auc_score
 
