@@ -108,30 +108,30 @@ Assign Scores to New Documents
 
 .. code:: python
 
-  # paraphrases is a DataFrame which contains the following columns: Quality, D1, and D2.
-  # Quality is an indicator variable which indicates if the two documents D1 and D2 are paraphrases of one another (1 for paraphrase, 0 for not paraphrase).
+    # paraphrases is a DataFrame which contains the following columns: Quality, D1, and D2.
+    # Quality is an indicator variable which indicates if the two documents D1 and D2 are paraphrases of one another (1 for paraphrase, 0 for not paraphrase).
 
-  import numpy as np
+    import numpy as np
 
-  def most_similar_docs():
-      
-      # Your Code Here
-      def func(x):
-          try:
-              return document_path_similarity(x['D1'], x['D2'])
-          except:
-              return np.nan
+    def most_similar_docs():
+        
+        # Your Code Here
+        def func(x):
+            try:
+                return document_path_similarity(x['D1'], x['D2'])
+            except:
+                return np.nan
 
-      paraphrases['similarity_score'] = paraphrases.apply(func, axis=1)
+        paraphrases['similarity_score'] = paraphrases.apply(func, axis=1)
 
-      # sort by score and extract the max
-      df = paraphrases.sort_values('similarity_score', ascending=False)[:1]
-      # remove similarity score
-      df = df[df.columns[1:]]
-      # change dataframe to an array, and convert to a tuple
-      output = tuple(df.values[0])
-     
-      return output 
+        # sort by score and extract the max
+        df = paraphrases.sort_values('similarity_score', ascending=False)[:1]
+        # remove similarity score
+        df = df[df.columns[1:]]
+        # change dataframe to an array, and convert to a tuple
+        output = tuple(df.values[0])
+       
+        return output 
       
 Calculate Accuarcy Score
 ------------------------
