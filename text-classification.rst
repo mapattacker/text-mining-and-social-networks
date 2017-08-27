@@ -5,6 +5,9 @@ Text Classificaton
 Add New Features to Vectorizer
 ------------------------------
 
+The vectorizer is meant only to transform the text of a corpus. If there are other additional features
+to be trained together in the final model, they need to be added together.
+
 .. code:: python
 
   def add_feature(X, feature_to_add):

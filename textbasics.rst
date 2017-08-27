@@ -9,6 +9,7 @@ The eventual output is an extracted list of word or words.
 Stopwords
 **********
 Stopwords are common words that are found in most texts in a corpus. 
+They are removed from a corpus as they provide no meaning or context for analysis. E.g., [the, is, ., ;]
 
 
 Tokenizing
@@ -161,7 +162,7 @@ Sklearn has several vectorizer functions that will tokenise and process text wit
 The process of vectorizing involves converting word characters into integers.
 It has several important parameters, including
   * ``min_df``: e.g., 5. ignore items of minimum document frequency of 5 (can be integer or ratio)
-  * ``max_df``: e.g., 0.2. ignore items of maximum document frequency of 5 (can be integer or ratio)
+  * ``max_df``: e.g., 0.2. ignore items of maximum document frequency of 20% (can be integer or ratio)
   * ``ngram_range``: e.g., (1-2). extracting only 1-grams or bigrams
   * ``stop_words``: list of stop words to remove
   * ``token_pattern``: e.g., '(?u)\\b\\w\\w\\w+\\b'). enter a regex pattern
