@@ -178,9 +178,12 @@ More from sklearn_.
   from sklearn.feature_extraction.text import CountVectorizer
 
   # Fit
+  # Learn a vocabulary dictionary of all tokens in the raw documents.
   vect = CountVectorizer().fit(X_train)
   print vect.get_feature_names() # give a list of feature names
-
+  
+  # Transform
+  # Transform documents to document-term matrix.
   X_train_vectorized = vect.transform(X_train)
   print vect.vocabulary_ # gives a dict of feature names with frequency
   print vect.vocabulary_.items() # gives pairs of key values in tuples instead, within a list
@@ -190,6 +193,7 @@ It is possible to fit & transform at the same time.
 
 .. code:: python
 
+  # Learn the vocabulary dictionary and return term-document matrix.
   X_train_vectorized = CountVectorizer().fit_transform(X_train)
 
 
