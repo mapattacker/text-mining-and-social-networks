@@ -160,8 +160,8 @@ Vectorization
 Sklearn has several vectorizer functions that will tokenise and process text within the same function.
 The process of vectorizing involves converting word characters into integers.
 It has several important parameters, including
-  * ``min_df``: e.g., 5. minute document frequency of 5 (can be integer or ratio)
-  * ``max_df``: e.g., 0.2. remove tokens that appear in more than 20% of document (can be integer or ratio)
+  * ``min_df``: e.g., 5. ignore items of minimum document frequency of 5 (can be integer or ratio)
+  * ``max_df``: e.g., 0.2. ignore items of maximum document frequency of 5 (can be integer or ratio)
   * ``ngram_range``: e.g., (1-2). extracting only 1-grams or bigrams
   * ``stop_words``: list of stop words to remove
   * ``token_pattern``: e.g., '(?u)\\b\\w\\w\\w+\\b'). enter a regex pattern
@@ -186,6 +186,13 @@ More from sklearn_.
   print vect.vocabulary_.items() # gives pairs of key values in tuples instead, within a list
 
 
+It is possible to fit & transform at the same time.
+
+.. code:: python
+
+  X_train_vectorized = CountVectorizer().fit_transform(X_train)
+
+
 TfidVectorizer
 **************
 TF-IDF (Term Frequency-Inverse Document Frequency)
@@ -206,5 +213,6 @@ More from sklearn2_.
   # min_df, a minimum document frequency of < 5
   # extracting 1-grams and 2-grams
   vect = TfidfVectorizer(min_df=5, ngram_range=(1,2)).fit(X_train)
+
 
 
