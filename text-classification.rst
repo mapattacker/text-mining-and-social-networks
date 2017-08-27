@@ -34,6 +34,7 @@ Using plain Naive Bayes & CountVectorizer only.
   import pandas as pd
   import numpy as np
   from sklearn.model_selection import train_test_split
+  from sklearn.feature_extraction.text import CountVectorizer
   from sklearn.naive_bayes import MultinomialNB
   from sklearn.metrics import roc_auc_score
   
@@ -68,6 +69,8 @@ Multi-Nominal Naive Bayes & TfidfVectorizer
 Now using Naive Bayes & TfidfVectorizer only.
 
 .. code:: python
+
+  from sklearn.feature_extraction.text import TfidfVectorizer
   
   def answer_five():
     

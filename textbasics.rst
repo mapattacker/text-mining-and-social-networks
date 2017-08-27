@@ -160,8 +160,8 @@ Vectorization
 Sklearn has several vectorizer functions that will tokenise and process text within the same function.
 The process of vectorizing involves converting word characters into integers.
 It has several important parameters, including
-  * ``min_df``: e.g., 5. minute document frequency of 5
-  * ``max_df``: e.g., 0.2. remove tokens that appear in more than 20% of document
+  * ``min_df``: e.g., 5. minute document frequency of 5 (can be integer or ratio)
+  * ``max_df``: e.g., 0.2. remove tokens that appear in more than 20% of document (can be integer or ratio)
   * ``ngram_range``: e.g., (1-2). extracting only 1-grams or bigrams
   * ``stop_words``: list of stop words to remove
   * ``token_pattern``: e.g., '(?u)\\b\\w\\w\\w+\\b'). enter a regex pattern
