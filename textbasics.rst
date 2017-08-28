@@ -161,14 +161,16 @@ Vectorization
 Sklearn has several vectorizer functions that will tokenise and process text within the same function.
 The process of vectorizing involves converting word characters into integers.
 It has several important parameters, including
-  * ``min_df``: e.g., 5. ignore items of minimum document frequency of 5 (can be integer or ratio)
-  * ``max_df``: e.g., 0.2. ignore items of maximum document frequency of 20% (can be integer or ratio)
+  * ``min_df``: Minimum document frequency. Terms that will be ignored because they occurred in too few documents (can be integer or ratio)
+  * ``max_df``: Maximum document frequency. Terms that will be ignored because they occurred in too many documents (can be integer or ratio)
   * ``ngram_range``: e.g., (1-2). extracting only 1-grams or bigrams
-  * ``stop_words``: list of stop words to remove
+  * ``stop_words``: list of stop words to remove. 'english' will remove a default list of stopwords.
   * ``token_pattern``: e.g., '(?u)\\b\\w\\w\\w+\\b'). enter a regex pattern
 
 CountVectorizer
 ****************
+Convert a collection of text documents to a matrix of token counts.
+
 More from sklearn_.
 
 .. _sklearn: http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer
@@ -200,6 +202,9 @@ It is possible to fit & transform at the same time.
 
 TfidVectorizer
 **************
+
+Convert a collection of raw documents to a matrix of TF-IDF features. Equivalent to CountVectorizer followed by TfidfTransformer.
+
 TF-IDF (Term Frequency-Inverse Document Frequency)
 is a metric where high weight is given to terms that appear often in a particular document, 
 but don't appear often in the corpus (all documents). 
