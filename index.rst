@@ -18,5 +18,7 @@ This documentation summarises various text-mining and social network techniques 
    text-classification.rst
    doc_similarity.rst
    topic_model.rst
+   resources.rst
    glossary.rst
+   
    
