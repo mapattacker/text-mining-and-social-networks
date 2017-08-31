@@ -169,7 +169,7 @@ It has several important parameters, including
 
 CountVectorizer
 ****************
-Convert a collection of text documents to a matrix of token counts.
+Convert a collection of text documents to a matrix of token counts. 
 
 More from sklearn_.
 
@@ -203,7 +203,14 @@ It is possible to fit & transform at the same time.
 TfidVectorizer
 **************
 
-Convert a collection of raw documents to a matrix of TF-IDF features. Equivalent to CountVectorizer followed by TfidfTransformer.
+TF: Term Frequency, which measures how frequently a term occurs in a document. Since every document is different in length, it is possible that a term would appear much more times in long documents than shorter ones. Thus, the term frequency is often divided by the document length (aka. the total number of terms in the document) as a way of normalization:
+
+**TF(t)** = (Number of times term t appears in a document) / (Total number of terms in the document).
+
+**IDF**: Inverse Document Frequency, which measures how important a term is. While computing TF, all terms are considered equally important. However it is known that certain terms, such as "is", "of", and "that", may appear a lot of times but have little importance. Thus we need to weigh down the frequent terms while scale up the rare ones, by computing the following:
+
+**IDF(t)** = log_e(Total number of documents / Number of documents with term t in it).
+
 
 TF-IDF (Term Frequency-Inverse Document Frequency)
 is a metric where high weight is given to terms that appear often in a particular document, 
