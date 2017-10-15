@@ -5,7 +5,7 @@
 
 Text-Mining & Social Networks
 =========================================================
-This documentation summarises various text-mining and social network techniques in Python.
+This documentation summarises various text-mining techniques in Python.
 
 
 .. toctree::
@@ -19,7 +19,6 @@ This documentation summarises various text-mining and social network techniques 
    doc_similarity.rst
    topic_model.rst
    resources.rst
-   networkx_load.rst
    glossary.rst
    
    
