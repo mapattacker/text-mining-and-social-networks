@@ -124,8 +124,11 @@ powerful analysis abilities.
 .. code:: python
 
   df = pd.DataFrame(new.edges(data=True), columns=['name1','name2','weights'])
-  df['relation'] = df['weights'].map(lambda x: x['Weight'])
-  
+
+Note that weight attributes are in a dictionary. 
+
+.. code:: python
+
   name1	  name2	  weights
   Georgia	Lee	    {u'Weight': 10}
   Georgia	Claude	{u'weight': 3, u'Weight': 90}
@@ -135,7 +138,13 @@ powerful analysis abilities.
   Georgia	Vincent	{u'Weight': 0}
   Georgia	Joan	  {u'Weight': 0}
   Lee	    Claude	{u'Weight': 0}
-  Lee	    Andy	
+  
+But we can easily extract the dictionary value using a map function.
+
+.. code:: python
+
+  df['relation'] = df['weights'].map(lambda x: x['Weight'])
+
 
 
 Printing out data
@@ -145,11 +154,14 @@ Printing out data
 
   # list nodes
   g.nodes()
+  
   # list edges
   g.edges()
+  
   # show all data, including weights and attributes
   g.nodes(data=True)
   g.edges(data=True)
+  
   # number of edges / nodes
   len(g) # or g.number_of_nodes()
   g.number_of_edges()
