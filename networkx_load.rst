@@ -121,7 +121,21 @@ Graph > DataFrame
 Sometimes, it is necessary to convert a graph into an edge list into a dataframe to utilise pandas 
 powerful analysis abilities.
 
-.. code:: ptyhon
+.. code:: python
+
+  df = pd.DataFrame(new.edges(data=True), columns=['name1','name2','weights'])
+  df['relation'] = df['weights'].map(lambda x: x['Weight'])
+  
+  name1	  name2	  weights
+  Georgia	Lee	    {u'Weight': 10}
+  Georgia	Claude	{u'weight': 3, u'Weight': 90}
+  Georgia	Andy	  {u'weight': 1, u'Weight': -10}
+  Georgia	Pablo	  {u'Weight': 0}
+  Georgia	Frida	  {u'Weight': 0}
+  Georgia	Vincent	{u'Weight': 0}
+  Georgia	Joan	  {u'Weight': 0}
+  Lee	    Claude	{u'Weight': 0}
+  Lee	    Andy	
 
 
 Printing out data
