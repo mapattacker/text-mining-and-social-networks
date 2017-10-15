@@ -131,8 +131,8 @@ Note that weight attributes are in a dictionary.
 
   name1	  name2	  weights
   Georgia	Lee	    {u'Weight': 10}
-  Georgia	Claude	{u'weight': 3, u'Weight': 90}
-  Georgia	Andy	  {u'weight': 1, u'Weight': -10}
+  Georgia	Claude	{u'Weight': 90}
+  Georgia	Andy	  {u'Weight': -10}
   Georgia	Pablo	  {u'Weight': 0}
   Georgia	Frida	  {u'Weight': 0}
   Georgia	Vincent	{u'Weight': 0}
