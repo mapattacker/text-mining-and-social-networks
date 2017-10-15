@@ -90,6 +90,12 @@ From a graph network, we can transform it into an adjacency matrix using a panda
   6.0	  2661.0	0.0	    0.0	    0.0	  1483.0	0.0	    0.0
   7.0	  0.0	    0.0	    1983.0	0.0  	1258.0	0.0   	0.0
 
+An adjacency matrix can also be loaded back to a graph
+
+.. code:: python
+
+  G3 = nx.Graph(matrix)
+  G3.edges()
 
 
 SQL > DataFrame > Graph
@@ -106,6 +112,31 @@ The below code uses an edge list format.
 
   query = """SELECT fromnode, tonode, distance from edges"""
   df = pd.read_sql_query(query, conn)
-  g=nx.from_pandas_dataframe(df, 'fromnode', 'tonode', 'distance')
+  g = nx.from_pandas_dataframe(df, 'fromnode', 'tonode', 'distance') # or edge_attr='distance'
 
+
+Graph > DataFrame
+------------------
+
+Sometimes, it is necessary to convert a graph into an edge list into a dataframe to utilise pandas 
+powerful analysis abilities.
+
+.. code:: ptyhon
+
+
+Printing out data
+------------------
+
+.. code:: python
+
+  # list nodes
+  g.nodes()
+  # list edges
+  g.edges()
+  # show all data, including weights and attributes
+  g.nodes(data=True)
+  g.edges(data=True)
+  # number of edges / nodes
+  len(g) # or g.number_of_nodes()
+  g.number_of_edges()
 
