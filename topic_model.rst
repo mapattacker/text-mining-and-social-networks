@@ -18,7 +18,7 @@ LDA can also be used as a feature selection technique for text classification an
 Choose length of document 
 Choose mixture of topic for document
 Use topic's multinomial distribution to output words to fill topics's quota
-    for a particular document, 40% of the words come from topic A, then you use that topic A's multinomial distribution to output the 40% of the words. 
+for a particular document, 40% of the words come from topic A, then you use that topic A's multinomial distribution to output the 40% of the words. 
 
 Training the Model
 ******************

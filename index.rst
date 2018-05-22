@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Text-Mining & Social Networks
+Text-Mining
 =========================================================
 This documentation summarises various text-mining techniques in Python.
 
