@@ -15,10 +15,9 @@ LDA is a very powerful tool and a text clustering tool that is fairly commonly
 used as the first step to understand what a corpus is about. 
 LDA can also be used as a feature selection technique for text classification and other tasks.
 
-Choose length of document 
-Choose mixture of topic for document
-Use topic's multinomial distribution to output words to fill topics's quota
-for a particular document, 40% of the words come from topic A, then you use that topic A's multinomial distribution to output the 40% of the words. 
+  * Choose length of document 
+  * Choose mixture of topic for document
+  * Use topic's multinomial distribution to output words to fill topics's quota for a particular document, e.g. 40% of the words come from topic A, then you use that topic A's multinomial distribution to output the 40% of the words. 
 
 Training the Model
 ******************
