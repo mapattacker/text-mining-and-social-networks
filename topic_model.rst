@@ -92,3 +92,8 @@ Topic names are subjective to the assigner.
       output = ['Computers & IT', 'Automobiles', 'Computers & IT', 'Religion', 'Automobiles', 'Sports',
                'Education', 'Religion', 'Computers & IT', 'Science']
       return output
+
+
+Resources
+*********
+https://www.analyticsvidhya.com/blog/2016/08/beginners-guide-to-topic-modeling-in-python/
