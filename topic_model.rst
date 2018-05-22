@@ -6,7 +6,9 @@ Topic Modelling is a coarse level analysis of what's in a text collection.
   * Different models available
   * Topic output is just a list of word distributions: interpretation is subjective
 
-**Given**: Corpus, Number of Topics. **Not Given**: Topic Names, Topic Distribution for each document
+**Given**: Corpus, Number of Topics. 
+
+**Not Given**: Topic Names, Topic Distribution for each document
 
 Latent Dirichlet Allocation
 ---------------------------
